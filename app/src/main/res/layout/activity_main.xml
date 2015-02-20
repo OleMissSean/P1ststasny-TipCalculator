@@ -1,0 +1,177 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity"
+    android:focusable="true"
+    android:background="@drawable/wp2"
+    android:orientation="vertical"
+    android:clickable="true">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/title"
+        android:id="@+id/TV_title"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ET_enterAmount"
+        android:layout_below="@+id/TV_title"
+        android:layout_alignLeft="@+id/TV_title"
+        android:layout_alignStart="@+id/TV_title"
+        android:layout_marginTop="40dp"
+        android:layout_alignRight="@+id/TV_title"
+        android:layout_alignEnd="@+id/TV_title"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:textAlignment="center"
+        android:hint="@string/enterAmount"
+        android:textColorHint="#D6D6D6"
+        android:inputType="number|numberDecimal"
+        android:gravity="center_vertical|center_horizontal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dollarSign"
+        android:id="@+id/TV_dollarSignEntry"
+        android:layout_alignBottom="@+id/ET_enterAmount"
+        android:layout_toLeftOf="@+id/ET_enterAmount"
+        android:layout_alignTop="@+id/ET_enterAmount"
+        android:textSize="30sp" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/S_tipSelection"
+        android:spinnerMode="dropdown"
+        android:entries="@array/tipArray"
+        android:prompt="@string/tipPrompt"
+        style="@style/Widget.AppCompat.DropDownItem.Spinner"
+        android:layout_alignTop="@+id/TV_recommend"
+        android:layout_toLeftOf="@+id/TV_dollarSignEntry" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/calculate"
+        android:id="@+id/B_btnSubmit"
+        android:layout_alignBottom="@+id/TV_finalTotal"
+        android:layout_toLeftOf="@+id/ET_enterAmount"
+        android:layout_toStartOf="@+id/ET_enterAmount" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/TV_recommend"
+        android:text="@string/recommended"
+        android:textSize="18sp"
+        android:layout_above="@+id/TV_tipTotal"
+        android:layout_alignLeft="@+id/TV_amountEntry"
+        android:layout_alignStart="@+id/TV_amountEntry"
+        android:layout_marginBottom="39dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/TV_finalTotalEdit"
+        android:text="@string/moneyOutput"
+        android:textSize="24sp"
+        android:layout_gravity="center_horizontal"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/TV_finalTotal"
+        android:text="@string/finalTotal"
+        android:textSize="24sp"
+        android:layout_alignTop="@+id/TV_finalTotalEdit"
+        android:layout_toLeftOf="@+id/TV_finalTotalEdit"
+        android:layout_toStartOf="@+id/TV_finalTotalEdit" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/percent"
+        android:id="@+id/TV_tipPercentSign"
+        android:textSize="25sp"
+        android:layout_below="@+id/TV_tipSelectionTitle"
+        android:layout_alignRight="@+id/TV_tipSelectionTitle"
+        android:layout_alignEnd="@+id/TV_tipSelectionTitle" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tipAmount"
+        android:id="@+id/TV_tipSelectionTitle"
+        android:textSize="20sp"
+        android:layout_above="@+id/S_tipSelection"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/IV_topLeftImage"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/topleft2"
+        android:layout_toStartOf="@+id/TV_dollarSignEntry"
+        android:layout_toLeftOf="@+id/TV_dollarSignEntry"
+        android:layout_alignBottom="@+id/TV_dollarSignEntry" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/IV_topRightImage"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/topright2"
+        android:layout_toEndOf="@+id/TV_title"
+        android:layout_alignBottom="@+id/ET_enterAmount"
+        android:layout_toRightOf="@+id/TV_title" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/TV_tipTotal"
+        android:text="@string/tipTotal"
+        android:textSize="24sp"
+        android:layout_above="@+id/TV_finalTotal"
+        android:layout_alignRight="@+id/TV_finalTotal"
+        android:layout_alignEnd="@+id/TV_finalTotal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/TV_tipTotalEdit"
+        android:text="@string/moneyOutput"
+        android:textSize="24sp"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/TV_recommend"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/subtotal"
+        android:id="@+id/TV_amountEntry"
+        android:textSize="18sp"
+        android:layout_above="@+id/TV_dollarSignEntry"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">P1ststasny</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="tipPrompt">Tip Percentage:</string>
+    <string name="dollarSign">"$"</string>
+    <string name="submit">Calculate</string>
+    <string name="recommended">"\n(20%+ Recommended)"</string>
+    <string-array name="tipArray">
+        <item>0</item>
+        <item>5</item>
+        <item>10</item>
+        <item>15</item>
+        <item>20</item>
+        <item>25</item>
+        <item>30</item>
+        <item>35</item>
+        <item>40</item>
+        <item>45</item>
+        <item>50</item>
+        <item>55</item>
+        <item>60</item>
+        <item>65</item>
+        <item>70</item>
+        <item>75</item>
+        <item>80</item>
+        <item>85</item>
+        <item>90</item>
+        <item>95</item>
+        <item>100</item>
+    </string-array>
+
+    <string name="title_activity_SelectedListener2">SelectedListener</string>
+    <string name="enterAmount">Enter Amount</string>
+    <string name="title">"Tip Calculator   "</string>
+    <string name="calculate">Calculate</string>
+    <string name="finalTotal">Final Total:</string>
+    <string name="percent">%</string>
+    <string name="tipAmount">Tip Amount:</string>
+    <string name="tipTotal">Tip Total:</string>
+    <string name="moneyOutput">" $    .    "</string>
+    <string name="subtotal">Subtotal:</string>
+
+</resources>
